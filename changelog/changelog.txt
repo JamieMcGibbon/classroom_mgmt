@@ -15,3 +15,7 @@ Classroom Management System Changelog
 - Moved the navigation sidebar to its own "sidebar.php" file
 - Added a new "incidents_x_student" table to the "classroom_mgmt" database
 - Added a new "roster.php" page
+
+10/3/17
+----------
+- Created "classroom_mgmt" repository on Github and pushed code to it.

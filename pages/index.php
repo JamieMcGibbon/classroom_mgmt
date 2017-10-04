@@ -41,6 +41,8 @@
 
 <body>
 
+  <?php include '../php/connection.php'; ?>
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -64,7 +66,22 @@
 
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">0</div>
+                                    <div class="huge">
+
+                                      <?php
+                                        $student_query = "SELECT * FROM students";
+                                        $results = mysqli_query($connection, $student_query);
+                                      ?>
+
+                                      <?php if($results -> num_rows > 0){
+                                              echo $results -> num_rows;
+                                            }
+                                            else{
+                                              echo 0;
+                                            }
+                                      ?>
+
+                                    </div>
                                     <div>Students</div>
                                 </div>
                             </div>
@@ -170,8 +187,6 @@
                                                       <tbody>
 
                                                         <?php
-
-                                                        include '../php/connection.php';
 
                                                         $student_query = "SELECT * FROM students";
                                                         $results = mysqli_query($connection, $student_query);

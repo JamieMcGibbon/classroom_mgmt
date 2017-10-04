@@ -19,3 +19,4 @@ Classroom Management System Changelog
 10/3/17
 ----------
 - Created "classroom_mgmt" repository on Github and pushed code to it.
+- Updated "# Students" box on "index.php" to display actual number of students in class

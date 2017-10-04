@@ -1,0 +1,17 @@
+Classroom Management System Changelog
+
+9/11/17
+----------
+- Created project using template(s) from startbootstrap.com
+- Customized template(s) by removing content and adding new content
+- Created MySQL database ("classroom_mgmt")
+- Created MySQL database tables ("teachers" and "students")
+- Added MySQL database connectivity (and tested with fake student data)
+- Added "Add New Student" page and began creating form to add new student
+    - Still requires logic to map a student to a specific teacher
+
+9/16/17
+----------
+- Moved the navigation sidebar to its own "sidebar.php" file
+- Added a new "incidents_x_student" table to the "classroom_mgmt" database
+- Added a new "roster.php" page

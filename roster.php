@@ -20,7 +20,7 @@
     <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
     <link href="./vendor/morrisjs/morris.css" rel="stylesheet">
@@ -84,7 +84,7 @@
 
                                                         <?php
 
-                                                        include '../php/connection.php';
+                                                        include './php/connection.php';
 
                                                         $student_query = "SELECT * FROM students";
                                                         $results = mysqli_query($connection, $student_query);
@@ -95,8 +95,8 @@
 
                                                               echo(
                                                                     "<tr>
-                                                                        <td>".$row['first_name']."</td>
-                                                                        <td>".$row['last_name']."</td>
+                                                                        <td><a href=\"./profile.php?id=".$row['student_id']."\">".$row['first_name']."</a></td>
+                                                                        <td><a href=\"./profile.php?id=".$row['student_id']."\">".$row['last_name']."</a></td>
                                                                         <td>".$row['parent_email']."</td>
                                                                         <td>".$row['parent_phone']."</td>
                                                                     </tr>"

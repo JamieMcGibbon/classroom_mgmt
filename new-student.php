@@ -35,7 +35,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <?php include '../php/connection.php'; ?>
+    <?php include './php/connection.php'; ?>
 
 </head>
 
@@ -44,7 +44,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <?php include('./includes/sidebar.php'); ?>
+        <?php include('./pages/includes/sidebar.php'); ?>
 
         <div id="page-wrapper">
             <div class="row">

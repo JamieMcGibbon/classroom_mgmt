@@ -49,7 +49,19 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Jamie McGibbon</h1>
+                  <?php
+                    $student_id = $_GET['id'];
+
+                    $student_query = "SELECT * FROM students WHERE student_id = $student_id";
+
+                    $results = mysqli_query($connection, $student_query);
+
+                    foreach($results as $row){
+                      echo "<h1 class=\"page-header\">".$row['first_name']." ".$row['last_name']."</h1>";
+                    }
+
+                  ?>
+
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -60,7 +72,7 @@
 
               <div class="col-lg-3">
 
-                <img src='./images/jamie.jpeg' height="200px" width="200px" />
+                <img src='http://via.placeholder.com/200x200' height="200px" width="200px" />
               </div>
 
               <div class="col-lg-9">
@@ -76,14 +88,30 @@
                                 </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>24</td>
-                                <td>jamie@mcgibbon.me</td>
-                                <td>781-888-1622</td>
-                                <td>Likes computers</td>
-                              </tr>
-                            </tbody>
-                          </table>
+
+                              <!-- PHP code to pull student information from the DB based on "id" parameter in URL -->
+                              <?php
+
+                                  $student_id = $_GET['id'];
+
+                                  $student_query = "SELECT * FROM students WHERE student_id = $student_id";
+
+                                  $results = mysqli_query($connection, $student_query);
+
+                                  foreach($results as $row){
+
+                                    echo "
+                                          <tr>
+                                            <td>".$row['age']."</td>
+                                            <td>".$row['parent_email']."</td>
+                                            <td>".$row['parent_phone']."</td>
+                                            <td>".$row['student_notes']."</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      ";
+                                  }
+                            ?>
 
                           <br /><br />
 

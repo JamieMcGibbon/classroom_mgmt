@@ -11,7 +11,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Classroom Management System</title>
+    <!-- Page Title -->
+    <?php include './pages/includes/title.php'; ?>
 
     <!-- Bootstrap Core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

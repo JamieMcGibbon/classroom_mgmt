@@ -19,8 +19,16 @@ Classroom Management System Changelog
 10/3/17
 ----------
 - Created "classroom_mgmt" repository on Github and pushed code to it.
-- Updated "# Students" box on "index.php" to display actual number of students in class 
+- Updated "# Students" box on "index.php" to display actual number of students in class
 
 10/5/17
 ----------
 - Loaded "classroom_mgmt" repository into C9.io web-based IDE
+
+11/4/17
+----------
+- Added a PHP include so that the site's title element could be updated in one spot
+- Updated "roster.php" to include links to student profiles (using an "id" parameter in the URL)
+- Updated "profile.php" so that student information is dynamically displayed on the page, based on the
+  "student_id" number included in the "id" parameter of the "roster.php" page. (Done using $_GET variable)
+- Removed pages from the "pages" folder and put them into the root directory, refactoring file dependencies as needed

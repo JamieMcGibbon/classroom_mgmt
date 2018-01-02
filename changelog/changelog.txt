@@ -32,3 +32,10 @@ Classroom Management System Changelog
 - Updated "profile.php" so that student information is dynamically displayed on the page, based on the
   "student_id" number included in the "id" parameter of the "roster.php" page. (Done using $_GET variable)
 - Removed pages from the "pages" folder and put them into the root directory, refactoring file dependencies as needed
+
+1/1/18
+----------
+- Updated the "login.html" page to include a nav strip at the top
+- Created a "process.php" page to process logins
+  - Login functionality not working, even if correct credentials are entered.
+  - Header functionality not working to redirect if user ends up on page without having clicked the "Submit" button.
